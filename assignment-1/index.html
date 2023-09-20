@@ -8,7 +8,55 @@
   </head>
 
   <body>
-    Hello world
+    <div id="container">
+      <h1 class="">Bookstore</h1>
+      <button id="add-button" class="" onclick="handleAddBook()">Add</button>
+      <div class="search">
+        <input type="text" class="search-box p-8" name="search-text" placeholder="Search books">
+        <button class="search-button p-8" onclick="searchByTitle()">Search</button>
+      </div>
+      <div class="clear"></div>
+      <div class="list-books mt-16">
+        <table>
+          <thead>
+            <tr>
+              <th class="book-name">Name</th>
+              <th class="book-author">Author</th>
+              <th class="book-topic">Topic</th>
+              <th class="book-action">Action</th>
+            </tr>
+          </thead>
+          <tbody id="book-datas">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="modal">
+      <div class="add-modal">
+        <div class="add-title">Add book</div>
+        <form>
+          <div class="input-add">
+            <div class="add-name-book mt-24">
+              Name
+              <input type="text" class="input-name mt-4" name="book-name" placeholder="Enter book bame" required>
+            </div>
+            <div class="add-author-book mt-16">
+              Author
+              <input type="text" class="input-author mt-4" name="book-author" placeholder="Enter book author" required>
+            </div>
+            <div class="add-topic-book mt-16">
+              Topic
+              <input type="text" class="input-topic mt-4" name="book-topic" placeholder="Enter book topic" required>
+            </div>
+          </div>
+          <div class="add-modal-button mt-24">
+            <button id="cancel-button">Cancel</button>
+            <button id="create-button" >Create</button>
+            <button id="save-button">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

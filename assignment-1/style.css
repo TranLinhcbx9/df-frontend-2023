@@ -1,4 +1,155 @@
+:root {
+  --primary-color: #11625F;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 html {
   height: 100%;
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
+.p-8{
+  padding: 8px !important;
+}
+.mt-4{
+  margin-top: 4px !important;
+}
+.mt-8{
+  margin-top: 8px !important;
+}
+.mt-16{
+  margin-top: 16px !important;
+}
+.mt-24{
+  margin-top: 24px !important;
+}
+.mt-32{
+  margin-top: 32px !important;
+}
+button{
+  border: var(--primary-color) solid 1px;
+  color: var(--primary-color);
+  opacity: 0.5;
+  padding: 8px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  background-color: white;
+  /* font-weight: bold; */
+}
+button:hover{
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+input{
+  border-radius: 8px;
+  border: var(--primary-color) solid 1px;
+  outline: none;
+  opacity: 0.5;
+}
+.clear{
+  clear: both;
+}
+#container{
+  width: 100%;
+  display: inline-block;
+  padding: 24px;
+  color: var(--primary-color);
+  position: relative;
+  background-color: #EEF3F1;
+  /* text-align: center; */
+}
+#container h1{
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#container .search{
+  /* opacity: 0.5; */
+  float: right;
+  background-color: #FCFFFE;
+}
+#container .search .search-box{
+  border: var(--primary-color) solid 1px;
+  opacity: 0.5;
+}
+#container .search-box::placeholder{
+  color: var(--primary-color);
+}
+#container .list-books{
+}
+#container table{
+  width: 100%;
+  /* border: var(--primary-color) solid 1px; */
+  border-collapse: collapse;
+  background-color: #FCFFFE;
+}
+#container table th,td{
+  /* width: 100%; */
+  border: var(--primary-color) solid 1px;
+  padding: 8px;
+}
+#book-datas .book-actions{
+  max-width: 0;
+  text-align: center;
+}
+#book-datas #edit-button{
+  /* margin-right: 8px; */
+  /* width: 90px; */
+}
+#book-datas #delete-button{
+  /* width: 90px; */
+}
+
+#modal{
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background: rgba(0,0,0,0.3);
+  align-items: center;
+  justify-content: center;
+  display: none;
+  color: var(--primary-color);
+}
+#modal .add-modal{
+  position: relative;
+  padding: 24px;
+  background-color: whitesmoke;
+  min-width: 200px;
+  max-width: calc(100% - 32px);
+  min-height: 100px;
+  animation: modalFadeIn ease 0.3s;
+  border-radius: 10px;
+}
+#modal .add-modal .add-title{
+  text-align: center;
+}
+#modal.open-add-model{
+  display: flex;
+}
+#modal .add-modal .input-name,
+#modal .add-modal .input-author,
+#modal .add-modal .input-topic{
+  width: 100%;
+  padding: 8px;
+}
+#modal .add-modal .add-modal-button{
+  float: right;
+}
+@keyframes modalFadeIn{
+  from{
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+  to{
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
